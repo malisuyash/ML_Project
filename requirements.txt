@@ -1,0 +1,4 @@
+pandas
+numpy
+seaborn
+-e .                # To trigger setup.py while running the requirements.txt
