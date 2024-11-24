@@ -23,16 +23,19 @@ class CustomException(Exception):
     def __init__(self, error_message, error_detail:sys):
         self.error_message = error_message_detail(error_message, error_detail)
         # self.error_detail = error_detail
-        super().__init__(self.error_message)           # Since we are inheriting from exception using super.__init__()
+        super().__init__(self.error_message)           # Since I am inheriting from exception using super.__init__()
         
     def __str__(self): 
         return self.error_message
     
 
-if __name__ == "__main__":
-    try:
-        a = 1 / 0
-    except Exception as e:
-        logging.info("Divide by Zero")
-        raise CustomException(e, sys)
+
+
+# Just to check if this is working properly and getting the error messages in log.
+# if __name__ == "__main__":
+#     try:
+#         a = 1 / 0
+#     except Exception as e:
+#         logging.info("Divide by Zero")
+#         raise CustomException(e, sys)
     
